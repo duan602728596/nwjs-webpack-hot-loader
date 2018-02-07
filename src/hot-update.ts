@@ -2,7 +2,7 @@
  * webpack在nwjs下的热更新功能
  *
  * @param { string } buildFile: webpack编译后的文件地址。注意！要用相对地址，相对于作为入口的.html文件
- * @param { ?string } rootFile: webpack入口文件，文件名
+ * @param { string } rootFile : webpack入口文件，文件名
  */
 
 class __NwWebpackHotUpdate__{
