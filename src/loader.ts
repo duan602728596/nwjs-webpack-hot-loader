@@ -38,7 +38,8 @@ module.exports = function(source: string, inputSourceMap: any): void{
     }
 
     const uploadScript: string = data.toString();
-    const newSource: string = (query.type === 'pug' || query.type === 'jade') ? injectPug(source, uploadScript, query) : injectHtml(source, uploadScript, query);
+    const newSource: string = (query.type === 'pug' || query.type === 'jade')
+        ? injectPug(source, uploadScript, query) : injectHtml(source, uploadScript, query);
 
     callback(null, newSource, inputSourceMap);
   });

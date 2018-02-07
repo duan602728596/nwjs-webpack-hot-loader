@@ -59,6 +59,7 @@ class __NwWebpackHotUpdate__{
     // 有文件变化但是script标签内没有文件
     if((this.rootFile && fileQuery.base !== this.rootFile) || (eventType === 'rename')){
       let _hasOne: boolean = false;     // 判断只执行一次app.js
+
       const newScript: HTMLScriptElement = document.createElement('script');
       this.body.appendChild(newScript);
       newScript.setAttribute('src', `${ this.rootFile }?t=${ new Date().getTime() }`);
@@ -90,8 +91,10 @@ class __NwWebpackHotUpdate__{
       for(let i: number = this.scripts.length - 1; i >= 0; i--){
         // 获取src标签的地址，并且截取到时间戳之前。使用getAttribute是因为：使用.src会获取到完整的基于浏览器地址的路径
         const src: string = this.scripts[i].getAttribute('src').split('?')[0];
+
         // 如果scripts的src是以webpack的编译目录开头，即html文件在build文件夹内，需要加目录，否则不加目录
         const srcFile: string = this.buildName.test(src) ? src : (this.buildFile + src);
+
         // 判断相对路径是否一致
         if(srcFile === cFile || ('./' + srcFile) === cFile){
           if(_isUpdate === false){
