@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "alwaysStrict": true,
+    "locale": "zh-cn",
+    "target": "es5",
+    "baseUrl": "src",
+    "outDir": "lib"
+  },
+  "exclude": [
+    "node_modules",
+    "engineering"
+  ]
+}
