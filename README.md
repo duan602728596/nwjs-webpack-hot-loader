@@ -47,6 +47,6 @@ window.addEventListener('load', function __hot_update_load__(event){
 ```
 
 ## 参数
-| buildFile | webpack文件编译后的目录 |
-| rootFile  | webpack入口文件名称     |
-| type      | 【loader】文件类型，可以是html、pug、jade |
+* buildFile: webpack文件编译后的目录
+* rootFile: webpack入口文件名称
+* type: 【loader】文件类型，可以是html、pug、jade
